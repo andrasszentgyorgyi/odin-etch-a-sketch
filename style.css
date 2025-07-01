@@ -1,16 +1,13 @@
 #container{
-    margin-top: 30px;
-    display:flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid red;
+    max-height: 540;
+}
+
+body{
+    background-color: #2F5249;
 }
 
 .row{
     display:flex;
-    flex:auto;
     justify-content: center;
     align-items: center;
     height:6.25%;
@@ -21,15 +18,39 @@
     border:1px solid black;
     height: 3vw;
     width: 3.25%;
+    display:flex;
+    flex: 1 1 1;
+    background-color: #437057;
 }
 
 #newBoard{
     width:200px;
     height:75px;
+    font-size: 36px;
+    border-radius: 5px;
+    background-color: #97B067;
+    border-color: #E3DE61;
+    font-family: "Chewy", system-ui;
+    font-weight: 1  00;
+    font-style: normal;
+    color: #2F5249;
 }
 
 #buttonContainer{
     display:flex;
     justify-content: center;
     align-items: center;
+    height:150px;
+    
+}
+
+#title{
+    text-align: center;
+    color: #E3DE61;
+    font-family: "Freckle Face", system-ui;
+    font-weight: 400;
+    font-size:50px;
+    font-style: normal;
+    padding:0;
+    margin:0;
 }

@@ -9,12 +9,13 @@ newBoardButton.addEventListener("click", ()=> newBoard());
 
 function newBoard(){
     let newBoardSize = prompt("Please enter your preferred board size! (1-100)");
-    while(!(newBoardSize>=1 && newBoardSize <=100)){
+    if(!(newBoardSize>=1 && newBoardSize <=100)){
         prompt("Invalid board size! Please enter a number between 1 and 100!");
+    } else {
+        deleteBoard();
+        gridSize = newBoardSize;
+        setup();
     }
-    deleteBoard();
-    gridSize = newBoardSize;
-    setup();
 }
 
 function deleteBoard(){
@@ -25,12 +26,16 @@ function deleteBoard(){
 }
 
 function setup(){
+    
     for(let i = 0; i<gridSize; i++){
         let row = document.createElement("div");
         row.className = "row";
+        row.style.height = `${540/gridSize}px`;
         for(let j = 0; j<gridSize; j++){
             let nestedElement = document.createElement("div")
             nestedElement.className = "rowElement";
+            nestedElement.style.height = `${540/gridSize}px`;
+            nestedElement.style.width = `${540/gridSize}px`;
             nestedElement.addEventListener("mouseover", ()=>hover(nestedElement));
             //nestedElement.addEventListener("mouseleave", ()=>unHover(nestedElement));
             row.appendChild(nestedElement);
