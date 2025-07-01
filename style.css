@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: 1px solid red;
 }
 
 .row{
@@ -20,4 +21,15 @@
     border:1px solid black;
     height: 3vw;
     width: 3.25%;
+}
+
+#newBoard{
+    width:200px;
+    height:75px;
+}
+
+#buttonContainer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
